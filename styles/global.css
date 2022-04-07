@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown h1 {
+    @apply text-blue-300 text-3xl py-2;
+}
+
+.markdown h2 {
+    @apply text-blue-300 text-2xl py-2;
+}
+
+.markdown br {
+    @apply py-2;
+}
+
+.markdown strong {
+    @apply text-secondary-focus font-bold;
+}
+
+.markdown ul {
+    @apply list-disc px-5;
+}
+
+.markdown ol {
+    @apply list-decimal px-5;
+}
+
+.markdown a {
+    @apply text-blue-500 font-medium px-1;
+
+}
+
+.markdown p {
+    @apply py-1;
+}
