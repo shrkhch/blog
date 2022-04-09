@@ -24,10 +24,16 @@ export default function About () {
                     />
                 </div>
             </div>
-            <div className='py-2'>
+            <div className='py-3 px-3 text-left'>
                 <p>{intro}</p>
+                <div className="divider"></div>
+                <p className="font-bold text-center">アクセス解析</p>
+                <p>このサイトはGoogle Analyticsを利用しています。</p>
+                <p>Google Analyticsはトラフィックデータの収集のためにCookieを使用しています。</p>
+                <p>Google Analyticsでデータが収集、処理される仕組みについては、以下の公式ページをご参照ください。</p>
+                <a className="link link-primary" href="https://policies.google.com/technologies/partner-sites?hl=ja">GOOGLE のサービスを使用するサイトやアプリから収集した情報の GOOGLE による使用</a>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center py-2">
                 <div className="px-1">
                     <Link href='https://github.com/iykjp'>
                         <a>
