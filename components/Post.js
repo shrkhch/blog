@@ -13,8 +13,8 @@ export default function Post({post}) {
     if(tag_flag == true) {
         return (
             <>
-                <div className="card card-compact lg:card-side p-1 shadow-lg bg-slate-700 rounded-md">
-                    <figure className="p-2"><Image src={url}  width={50} height={50} priority={true} alt={'coverImage'} /></figure>
+                <div className="card card-compact lg:w-56 p-1 shadow-lg bg-slate-700 rounded-md">
+                    <figure className="p-1"><Image src={url}  width={50} height={50} priority={true} alt={'coverImage'} /></figure>
                     <div className="card-body items-center place-content-center">
                     <Link href={`/blog/${post.slug}`}>
                         <h2 className="card-title link link-hover">{post.frontmatter.title}</h2>
