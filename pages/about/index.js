@@ -3,35 +3,35 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function About () {
-    const intro = "フロントエンドがすきです。";
+    const intro = "This is blog site.";
 
     return (
-        <div className="container mx-auto  bg-slate-700 px-0 rounded-md py-3">
+        <div className="container mx-auto  bg-stone-100 px-0 rounded-md py-3">
             <Head>
-                <title>about</title>
+                <title>ABOUT</title>
             </Head>
-            <div className="text-center text-xl py-5">
-                ABOUT
+            <div className="flex flex-col items-center">
+                    <div className="rounded-md w-24">
+                        <Image 
+                            src="/images/avatar.png"
+                            width={100}
+                            height={100}
+                            alt="avatar"
+                            className="rounded-full"
+                        />
+                    </div>
+                    <div>
+                        <span className="font-medium">このブログは備忘録として活用したり、何かしらを整理するためのブログです。</span>
+                    </div>
             </div>
-            <div className="text-center">
-            <div className="avatar">
-                <div className="w-24 rounded-full">
-                    <Image 
-                        src="/images/avatar.png"
-                        width={100}
-                        height={100}
-                        alt="avatar"
-                    />
-                </div>
-            </div>
-            <div className='py-3 px-3 text-left'>
-                <p>{intro}</p>
+            <div className='py-3 px-3 '>
                 <div className="divider"></div>
-                <p className="font-bold text-center">アクセス解析</p>
+                <p className="font-bold text-lg text-center">Google Analytics</p>
                 <p>このサイトはGoogle Analyticsを利用しています。</p>
                 <p>Google Analyticsはトラフィックデータの収集のためにCookieを使用しています。</p>
-                <p>Google Analyticsでデータが収集、処理される仕組みについては、以下の公式ページをご参照ください。</p>
-                <a className="link link-primary" href="https://policies.google.com/technologies/partner-sites?hl=ja">GOOGLE のサービスを使用するサイトやアプリから収集した情報の GOOGLE による使用</a>
+                <p>Google Analyticsでデータが収集、処理される仕組みについては以下の公式ページをご参照ください。</p>
+                「<a className="font-light text-indigo-600" href="https://policies.google.com/technologies/partner-sites?hl=ja">
+                    GOOGLE のサービスを使用するサイトやアプリから収集した情報の GOOGLE による使用</a>」
             </div>
             <div className="flex justify-center py-2">
                 <div className="px-1">
@@ -59,7 +59,6 @@ export default function About () {
                     </Link>
                 </div>
             </div>            
-            </div>
         </div>
     );
 }

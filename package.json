@@ -11,8 +11,6 @@
     "clear-hard-source-cache": "rm -rf node_modules/.cache/hard-source/"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.2",
-    "daisyui": "^2.13.4",
     "gray-matter": "^4.0.3",
     "next": "^12.1.4",
     "react": "17.0.2",
@@ -27,11 +25,11 @@
     "twemoji": "^14.0.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.4",
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.2",
     "postcss": "^8.4.12",
-    "sass": "^1.49.10",
     "tailwindcss": "^3.0.23"
   }
 }

@@ -13,32 +13,28 @@ export default function PostPage({
     frontmatter: {title,date,cover_image}, slug, content 
 }) {
     return (
-        <div className="container mx-auto  bg-slate-700 rounded-md py-6">
+        <div className="container mx-auto py-2">
             <Head>
                 <title>{slug}</title>
             </Head>
-            <div className="flex">
-                <p className="text-2xl pr-1">タイトル:</p>
-                <p className=" text-blue-300 text-2xl font-bold">{title}</p>
+            <div className="flex-col text-right">
+                <p className=" text-zinc-600 text-2xl font-thin">{date}</p>
             </div>
-            <div className="flex">
-                <p className="text-2xl pr-1">作成日時:</p>
-                <p className=" text-blue-300 text-2xl font-bold">{date}</p>
+            <div className="flex-col mb-3">
+                <p className=" text-zinc-600 text-3xl text-center font-thin">{title}</p>
             </div>
+
 
             <div className="divider"></div>
             <div className="markdown">
-            <ReactMarkdown className="markdown" children={content} remarkPlugins={[remarkGfm,remarkEmoji]} rehypePlugins={[[rehypePrism],{theme: 'Holi Theme'}]}  />
+                <ReactMarkdown className="markdown" children={content} remarkPlugins={[remarkGfm,remarkEmoji]} rehypePlugins={[[rehypePrism],{theme: 'Holi Theme'}]}  />
             </div>
             <div className="divider"></div>
 
             <div className="text-right">
-                <button className="btn-link">
                     <Link href={"/"}>
-                        BACK
+                        <a className="hover:text-indigo-600">BACK</a>
                     </Link>
-                </button>
-
             </div>
         </div>
     )

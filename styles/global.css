@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    font-family: serif;
+}
+a:hover {
+    text-decoration: underline;
+}
 .markdown h1 {
-    @apply text-blue-300 text-3xl py-2;
+    @apply text-zinc-600 text-3xl py-2;
 }
 
 .markdown h2 {
-    @apply text-blue-300 text-2xl py-2;
+    @apply text-zinc-600 text-2xl py-2;
 }
 
 .markdown br {
@@ -15,7 +21,7 @@
 }
 
 .markdown strong {
-    @apply text-secondary-focus font-bold;
+    @apply font-bold;
 }
 
 .markdown ul {
@@ -27,10 +33,14 @@
 }
 
 .markdown a {
-    @apply text-blue-500 font-medium px-1;
+    @apply hover:text-indigo-600 font-medium px-1;
 
 }
 
 .markdown p {
     @apply py-1;
+}
+
+.markdown img {
+    @apply rounded-md
 }
