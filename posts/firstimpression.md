@@ -1,6 +1,6 @@
 ---
 title: 'ブログを構築した'
-date: '2022-04-06'
+date: '2022-04-29'
 tags:
     - Next.js
     - Markdown
@@ -21,15 +21,3 @@ const a = () => {
 
 a(); // Hello
 ```  
-
-## 今後  
-
-- Inkdrop活用  
-- TypeScript化
-- Google Analytics導入
-- OGP化
-- Tag検索
-- Jestを使ったテスト
-
-
-などをやっていきたい。
