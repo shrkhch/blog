@@ -5,7 +5,7 @@ tags:
     - Next.js
     - Markdown
 ---
-先月、Next.jsとMDXを使ってブログを構築したが、[Inkdrop](https://www.inkdrop.app/)との兼ね合いを考えてもう一度0からMarkdownで作ってみることにした。
+前にMDXを使ってブログを構築したが、[Inkdrop](https://www.inkdrop.app/)との兼ね合いを考えてもう一度0からMarkdownで作ってみることにした。
 
 ## ライブラリなど
 
