@@ -13,11 +13,11 @@ export default function Post({post}) {
     if(tag_flag == true) {
         return (
             <>  
-                <div className="">
-                    <div className="flex justify-start">
-                        <h3 className="text-left text-xl font-light pr-2">{post.frontmatter.date}</h3>
+                <div>
+                    <div className="flex flex-col items-center">
+                        <h3 className="text-left text-md font-light">{post.frontmatter.date}</h3>
                         <Link href={`/blog/${post.slug}`} >
-                            <a><h2 className="inline-block text-xl font-normal hover:text-indigo-700">{post.frontmatter.title}</h2></a>
+                            <a><h2 className="inline-block text-xl font-normal hover:text-green-700 mb-4">{post.frontmatter.title}</h2></a>
                         </Link>
                     </div>
                 </div>

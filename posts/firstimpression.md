@@ -10,7 +10,7 @@ tags:
 ## ライブラリなど
 
 - Markdown Renderer [**react-markdown**](https://github.com/remarkjs/react-markdown)
-- emoji [**twemoji**](https://twemoji.maxcdn.com/)[**remark-emoji**](https://github.com/rhysd/remark-emoji)  
+- emoji [**twemoji**](https://twemoji.maxcdn.com/) [**remark-emoji**](https://github.com/rhysd/remark-emoji)  
 :wave: :cat: :apple:
 - Syntax Highlight [**rehype-prism-plus**](https://github.com/timlrx/rehype-prism-plus)  
 

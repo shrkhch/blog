@@ -23,7 +23,7 @@ export default function Home({ posts }) {
         ))
         }
       </div> */}
-      <div>
+      <div className="container mx-auto w-full px-0">
         {posts.map((post, index) => (
           <Post key={index} post={post} />
         ))

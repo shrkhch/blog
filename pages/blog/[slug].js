@@ -27,7 +27,7 @@ export default function PostPage({
 
             <div className="divider"></div>
             <div className="markdown">
-                <ReactMarkdown className="markdown" children={content} remarkPlugins={[remarkGfm,remarkEmoji]} rehypePlugins={[[rehypePrism],{theme: 'Holi Theme'}]}  />
+                <ReactMarkdown className="markdown" children={content} remarkPlugins={[remarkGfm,remarkEmoji]} rehypePlugins={[[rehypePrism],{theme: 'Duotone Sea'}]}  />
             </div>
             <div className="divider"></div>
 

@@ -1,5 +1,5 @@
 import '../styles/global.css'
-import '../styles/HoliTheme.css'
+import '../styles/DuoToneTheme.css'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import GoogleAnalytics from '@/components/GoogleAnalytics'

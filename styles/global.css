@@ -9,11 +9,11 @@ a:hover {
     text-decoration: underline;
 }
 .markdown h1 {
-    @apply text-zinc-600 text-3xl py-2;
+    @apply text-sky-600 text-3xl py-2;
 }
 
 .markdown h2 {
-    @apply text-zinc-600 text-2xl py-2;
+    @apply text-sky-600 text-2xl py-2;
 }
 
 .markdown br {
@@ -33,7 +33,7 @@ a:hover {
 }
 
 .markdown a {
-    @apply hover:text-indigo-600 font-medium px-1;
+    @apply hover:text-green-800 font-medium ;
 
 }
 

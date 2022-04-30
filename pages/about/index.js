@@ -6,7 +6,7 @@ export default function About () {
     const intro = "This is blog site.";
 
     return (
-        <div className="container mx-auto  bg-stone-100 px-0 rounded-md py-3">
+        <div className="container mx-auto  bg-stone-100 px-0 rounded-sm py-3">
             <Head>
                 <title>ABOUT</title>
             </Head>
