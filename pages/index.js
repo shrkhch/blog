@@ -23,12 +23,14 @@ export default function Home({ posts }) {
         ))
         }
       </div> */}
-      <div className="container mx-auto w-full px-0">
+      <ul className="container list-none mx-auto w-full px-0">
         {posts.map((post, index) => (
-          <Post key={index} post={post} />
+          <li className="bg-sky-50 rounded-md my-4">
+            <Post key={index} post={post} /> 
+          </li>
         ))
         }
-      </div>
+      </ul>
       {/* <div className="font-bold text-xl py-7">
           TAGS
       </div>
