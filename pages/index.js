@@ -7,7 +7,7 @@ export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-0">
       <Head>
-        <title>MOCHA TALK</title>
+        <title>Mocha Talk</title>
       </Head>
         {/* <ul className="place-content-center">
           {posts.map((post, index) => (
