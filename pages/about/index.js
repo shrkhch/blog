@@ -18,7 +18,7 @@ export default function About () {
                             className="rounded-full"
                         />
                     </div> */}
-                    <div className="flex">
+                    <div className="flex px-2">
                         <strong>Notes:</strong>
                         <span className="font-medium">このブログは備忘録として活用したり、何かしらを整理するためのブログです。</span>
                     </div>
