@@ -6,7 +6,7 @@ export default function About () {
     return (
         <div className="container mx-auto  bg-sky-50 px-0 rounded-sm py-3">
             <Head>
-                <title>ABOUT</title>
+                <title>About</title>
             </Head>
             <div className="flex flex-col items-center">
                     {/* <div className="rounded-md w-24">

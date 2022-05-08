@@ -43,20 +43,28 @@ const handlePassWord = (password) => {
 
 ```
 
-上記だと効率が悪いため、下記に修正。
+1つのフォームに対して１つの関数だと非効率なため、下記に修正。
 
 ``` javascript
+// 例
 const [values, setValues] = useState({
     name: '',
     email: '',
     password: ''
 })
 
-const handleOnChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
+const handleOnChange = (name,value) => {
     setValues({...values, [name]: value});
 }
 ```
 
-オブジェクトで管理することで複数のフォームに対して一つのハンドラーで済む。
+``` jsx
+{/*例*/}
+<form>
+    <input type="text" name="name" value={values.name} onChange={(e) => handleOnChange(e.target.name,e.target.value)} />
+    <input type="email" name="email" value={values.email} onChange={(e) => handleOnChange(e.target.name,e.target.value)} />
+    <input type="password" name="password" value={values.password} onChange={(e) => handleOnChange(e.target.name,e.target.value)} />
+</form>
+```
+
+オブジェクトにすることで複数のフォームに対して一つの関数で済む。
