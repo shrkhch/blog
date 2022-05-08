@@ -17,7 +17,7 @@ export default function Post({post}) {
                     <div className="flex flex-col items-center">
                         <h3 className="text-left text-md font-light mt-2">{post.frontmatter.date}</h3>
                         <Link href={`/blog/${post.slug}`} >
-                            <a><h2 className="inline-block text-xl font-normal hover:text-green-700 mb-2">{post.frontmatter.title}</h2></a>
+                            <a><h2 className="inline-block text-xl font-normal hover:text-red-700 mb-2">{post.frontmatter.title}</h2></a>
                         </Link>
                     </div>
                 </div>

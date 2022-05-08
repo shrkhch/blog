@@ -10,11 +10,11 @@ export default function Home({ posts }) {
         <title>Mocha Talk</title>
       </Head>
 
-      <ul className="container list-none mx-auto w-full px-0">
+      <ul className="container bg-emerald-50 list-none mx-auto w-full px-0">
         {posts.map((post,index) => {
           //console.log(post["frontmatter"]["id"]);
           return (
-          <li key={post.frontmatter.id} className="bg-sky-50 rounded-md my-4">
+          <li key={post.frontmatter.id} className="rounded-md my-4">
             <Post post={post} /> 
           </li>
           )

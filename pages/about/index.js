@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function About () {
     return (
-        <div className="container mx-auto  bg-sky-50 px-0 rounded-sm py-3">
+        <div className="container mx-auto bg-gray-100 rounded-sm py-3">
             <Head>
                 <title>About</title>
             </Head>
@@ -18,10 +18,15 @@ export default function About () {
                             className="rounded-full"
                         />
                     </div> */}
-                    <div className="flex px-2">
+                    <div className="flex">
                         <strong>Notes:</strong>
-                        <span className="font-medium">このブログは備忘録として活用したり、何かしらを整理するためのブログです。</span>
+                        <span className="font-medium">備忘録として活用したり、気づいた事などを記録するブログです。</span>
                     </div>
+                    <div>
+                    <a href="https://store.steampowered.com/app/914800/Coffee_Talk/?l=japanese" className="text-emerald-500">Coffee Talk</a>
+                    、散歩、MTG(Pauper)を軸に生活が回っています。Rest in Peace Fahmi.
+                    </div>
+                    <div></div>
             </div>
             {/* <div className='py-3 px-3 '>
                 <div className="divider"></div>
@@ -57,7 +62,8 @@ export default function About () {
                         </a>
                     </Link>
                 </div>
-            </div>             */}
+            </div> 
+            */}
         </div>
     );
 }
