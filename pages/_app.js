@@ -1,5 +1,5 @@
 import '../styles/global.css'
-import '../styles/DuoToneTheme.css'
+import '../styles/prism-nord.css'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 

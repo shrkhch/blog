@@ -1,4 +1,5 @@
 ---
+id: 2
 title: 'Nodemailer使ってみた'
 date: '2022-04-30'
 tags:
