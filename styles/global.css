@@ -4,21 +4,27 @@
 
 body {
     font-family: "Helvetica Neue",
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo,
-    sans-serif;
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 .markdown h1 {
     @apply text-sky-600 text-3xl py-2;
 }
 
 .markdown h2 {
     @apply text-sky-600 text-2xl py-2;
+}
+
+.markdown h3 {
+    @apply text-sky-600 text-xl py-2;
 }
 
 .markdown br {
@@ -38,7 +44,7 @@ a:hover {
 }
 
 .markdown a {
-    @apply hover:text-green-800 font-medium ;
+    @apply text-green-700 font-medium;
 
 }
 
@@ -47,5 +53,6 @@ a:hover {
 }
 
 .markdown img {
-    @apply rounded-md
+    @apply rounded-md border-2 border-gray-400;
+
 }
