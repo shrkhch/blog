@@ -14,7 +14,7 @@ export default function Header() {
                 </Link>
                 <div className="flex-auto text-right">
                 <Link href={"/about"}>
-                    <a className="text-lg font-mono">ABOUT</a>
+                    <a className="text-lg font-mono ">ABOUT</a>
                 </Link>
                 </div>
                 </div>
