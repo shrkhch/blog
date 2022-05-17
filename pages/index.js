@@ -8,7 +8,6 @@ export default function Home({ posts }) {
     <div className="container mx-auto px-0">
       <Head>
         <title>Mocha Talk</title>
-        <meta name='description' content='備忘録や何某を記録するブログ'></meta>
       </Head>
 
       <ul className="container bg-emerald-100 rounded-md list-none mx-auto w-full px-0">
