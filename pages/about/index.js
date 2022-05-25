@@ -24,7 +24,7 @@ export default function About () {
                     </div>
                     <div>
                     <a href="https://store.steampowered.com/app/914800/Coffee_Talk/?l=japanese" className="text-emerald-500">Coffee Talk</a>
-                    、散歩、MTG(Pauper)を軸に生活が回っています。Rest in Peace Fahmi.
+                    、散歩、MTG(Pauper)を軸に生活が回っています。
                     </div>
                     <div></div>
             </div>
