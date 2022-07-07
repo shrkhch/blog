@@ -7,27 +7,26 @@ import Link from 'next/link'
 import Head from 'next/head'
 import remarkGfm from 'remark-gfm'
 import remarkEmoji from 'remark-emoji'
-import rehypePrism from 'rehype-prism-plus'
 
 export default function PostPage({ 
     frontmatter: {title,date,cover_image}, slug, content 
 }) {
     return (
-        <div className="container mx-auto py-2">
+        <div className="mx-auto py-2 prose prose-lg w-full">
             <Head>
                 <title>{slug}</title>
             </Head>
             <div className="flex-col text-right">
-                <p className=" text-zinc-600 text-2xl font-thin">{date}</p>
+                <p className=" text-zinc-600 ">公開日：{date}</p>
             </div>
             <div className="flex-col mb-3">
-                <p className=" text-zinc-600 text-3xl text-center font-thin">{title}</p>
+                <h2 className="text-center">{title}</h2>
             </div>
 
 
             <div className="divider"></div>
             <div className="markdown">
-                <ReactMarkdown className="markdown" children={content} remarkPlugins={[remarkGfm,remarkEmoji]} rehypePlugins={[[rehypePrism],{theme: 'Nord'}]}  />
+                <ReactMarkdown className="markdown" children={content} remarkPlugins={[remarkGfm,remarkEmoji]} />
             </div>
             <div className="divider"></div>
 

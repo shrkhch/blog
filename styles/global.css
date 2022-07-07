@@ -3,28 +3,43 @@
 @tailwind utilities;
 
 body {
-    font-family: "Helvetica Neue",
+    font-family: 
         Arial,
         "Hiragino Kaku Gothic ProN",
         "Hiragino Sans",
         Meiryo,
         sans-serif;
+    @apply bg-stone-100
+}
+:root {
+    --background: white;
+    --foreground: black;
 }
 
-a:hover {
-    text-decoration: underline;
+[data-theme='dark'] {
+    --background: black;
+    --foreground: white;
+}
+h1 {
+    @apply font-bold
+}
+h2 {
+    @apply font-bold
+}
+a {
+    text-decoration: none;
 }
 
 .markdown h1 {
-    @apply text-sky-600 text-3xl py-2;
+    @apply text-stone-50 text-3xl py-2;
 }
 
 .markdown h2 {
-    @apply text-sky-600 text-2xl py-2;
+    @apply text-gray-600 text-2xl py-2;
 }
 
 .markdown h3 {
-    @apply text-sky-600 text-xl py-2;
+    @apply text-gray-600 text-xl py-2;
 }
 
 .markdown br {
@@ -44,7 +59,7 @@ a:hover {
 }
 
 .markdown a {
-    @apply text-green-700 font-medium;
+    @apply text-gray-700 font-medium;
 
 }
 

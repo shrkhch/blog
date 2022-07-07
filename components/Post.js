@@ -14,12 +14,12 @@ export default function Post({post}) {
         return (
             <>  
                 <div>
-                    <div className="flex flex-col items-center">
-                        <h3 className="text-left text-md font-light font-mono mt-2">{post.frontmatter.date}</h3>
-                        <Link href={`/blog/${post.slug}`} >
-                            <a><h2 className="inline-block text-xl font-normal font-mono underline hover:underline-offset-4 mb-2">{post.frontmatter.title}</h2></a>
-                        </Link>
+                    <a href={`/blog/${post.slug}`}>
+                    <div className="text-center rounded-md border shadow-md hover:bg-slate-100">
+                        <h3 className="text-md  p-3">{post.frontmatter.date}</h3>
+                            <h2 className="inline-block text-xl no-underline pb-3">{post.frontmatter.title}</h2>
                     </div>
+                    </a>
                 </div>
                     {/* <div className="flex">
                         {

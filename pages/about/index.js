@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function About () {
     return (
-        <div className="container mx-auto bg-gray-100 rounded-sm py-3">
+        <div className="container mx-auto rounded-sm py-3">
             <Head>
                 <title>About</title>
             </Head>
@@ -28,15 +28,6 @@ export default function About () {
                     </div>
                     <div></div>
             </div>
-            {/* <div className='py-3 px-3 '>
-                <div className="divider"></div>
-                <p className="font-bold text-lg text-center">Google Analytics</p>
-                <p>このサイトはGoogle Analyticsを利用しています。</p>
-                <p>Google Analyticsはトラフィックデータの収集のためにCookieを使用しています。</p>
-                <p>Google Analyticsでデータが収集、処理される仕組みについては以下の公式ページをご参照ください。</p>
-                「<a className="font-light text-indigo-600" href="https://policies.google.com/technologies/partner-sites?hl=ja">
-                    GOOGLE のサービスを使用するサイトやアプリから収集した情報の GOOGLE による使用</a>」
-            </div> */}
             {/* <div className="flex justify-center py-2">
                 <div className="px-1">
                     <Link href='https://github.com/iykjp'>

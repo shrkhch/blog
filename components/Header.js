@@ -1,21 +1,17 @@
 import Link from 'next/link';
+import ToggleTheme from './ToggleTheme';
 
 export default function Header() {
     return (
             <div className="navbar px-0 bg-base-100">
                 <div className="flex justify-between">
-                <Link href={"/"}>
-                    <a className="normal-case pl-0 text-2xl font-normal border-0">
-                        <div className="flex flex-col justify-start">
-                            <div className="font-mono flex-none inline-block">MOCHA</div>
-                            <div className="font-mono flex-none inline-block text-left pl-7 ml-7">TALK</div>
-                        </div>
-                        </a>
-                </Link>
-                <div className="flex-auto text-right">
-                <Link href={"/about"}>
-                    <a className="text-lg font-mono ">ABOUT</a>
-                </Link>
+                    <a href={'/'} className="text-3xl font-normal">
+                        lazuwrite
+                    </a>
+                <div className="">
+                <a href={"/about"}>
+                    <span className="font-normal text-md">me</span>
+                </a>
                 </div>
                 </div>
             </div>
