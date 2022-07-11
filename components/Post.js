@@ -1,11 +1,8 @@
 /* eslint-disable @next/next/link-passhref */
 import Link from 'next/link'
-import twemoji from 'twemoji'
 import Image from 'next/image'
 
 export default function Post({post}) {
-    // const codepoint = twemoji.convert.toCodePoint(post.frontmatter.cover_image);
-    // const url = `https://twemoji.maxcdn.com/v/latest/svg/${codepoint.split('-')[0]}.svg`;
     let tag_flag = false;
     if(post.frontmatter.tags !== null){
         tag_flag = true;
@@ -13,10 +10,10 @@ export default function Post({post}) {
     if(tag_flag == true) {
         return (
             <>  
-                <div>
+                <div className='mx-3 my-1'>
                     <a href={`/blog/${post.slug}`}>
-                    <div className="text-center rounded-md border shadow-md hover:bg-slate-100">
-                        <h3 className="text-md  p-3">{post.frontmatter.date}</h3>
+                    <div className="text-center rounded-md border border shadow-md hover:bg-zinc-50">
+                        <h3 className="text-md p-3">{post.frontmatter.date}</h3>
                             <h2 className="inline-block text-xl no-underline pb-3">{post.frontmatter.title}</h2>
                     </div>
                     </a>

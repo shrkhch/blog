@@ -1,18 +1,20 @@
 /* eslint-disable react/no-children-prop */
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import ReactMarkdown from 'react-markdown'
-import Link from 'next/link'
-import Head from 'next/head'
-import remarkGfm from 'remark-gfm'
-import remarkEmoji from 'remark-emoji'
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import ReactMarkdown from 'react-markdown';
+import Link from 'next/link';
+import Head from 'next/head';
+import remarkGfm from 'remark-gfm';
+import remarkEmoji from 'remark-emoji';
+import rehypeHighlight from 'rehype-highlight';
+
 
 export default function PostPage({ 
-    frontmatter: {title,date,cover_image}, slug, content 
+    frontmatter: {title,date,}, slug, content 
 }) {
     return (
-        <div className="mx-auto py-2 prose prose-lg w-full">
+        <div className="mx-auto py-2 prose prose-md w-full">
             <Head>
                 <title>{slug}</title>
             </Head>
@@ -26,13 +28,18 @@ export default function PostPage({
 
             <div className="divider"></div>
             <div className="markdown">
-                <ReactMarkdown className="markdown" children={content} remarkPlugins={[remarkGfm,remarkEmoji]} />
+                <ReactMarkdown
+                className="markdown"
+                children={content} 
+                remarkPlugins={[remarkGfm,remarkEmoji]}
+                rehypePlugins={[rehypeHighlight]}
+                />
             </div>
             <div className="divider"></div>
 
-            <div className="text-right">
+            <div className="text-right my-3">
                     <Link href={"/"}>
-                        <a className="hover:text-indigo-600">BACK</a>
+                        <a className="hover:text-gray-400 no-underline">back</a>
                     </Link>
             </div>
         </div>

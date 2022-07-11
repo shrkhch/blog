@@ -6,7 +6,7 @@ tags:
     - JavaScript
 ---
 
-変数名を角括弧で囲む
+変数名を角括弧で囲む。
 
 ``` javascript
 const foo = 'age';
@@ -17,3 +17,5 @@ const a = {
 
 console.log(a) // Object { name: "Alis", age: "20" }
 ```
+
+以上。

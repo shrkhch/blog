@@ -9,9 +9,9 @@ export default function Header() {
                         lazuwrite
                     </a>
                 <div className="">
-                <a href={"/about"}>
-                    <span className="font-normal text-md">me</span>
-                </a>
+                {/* <a href={"/about"}>
+                    <span className="font-normal text-md hover:text-stone-400">me</span>
+                </a> */}
                 </div>
                 </div>
             </div>

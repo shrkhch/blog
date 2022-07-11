@@ -4,8 +4,9 @@ export default function Document() {
     return (
         <Html>
             <head>
-            <meta description="daily dev log"/>
-            <Head />
+                <meta charSet="UTF-8" />
+                <meta name="description" content="blog and products" />
+                <Head />
             </head>
             <body>
                 <Main />

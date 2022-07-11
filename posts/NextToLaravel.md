@@ -21,8 +21,8 @@ graphqlを使ってNext.jsとバックエンドとの連携のテストをした
     - MySQL
 
 ## graphql  
-以下のクエリで値が取れるようにLaravel側で設定。
-``` graphql
+以下のクエリで値が取得できるようLaravel側で設定。
+``` 
 query {
     users {
         id
@@ -67,16 +67,16 @@ export async function getStaticProps() {
   }
 }
 ```
-**ここでエラーが発生**  
+**しかしここでエラーが発生**  
 reason: connect ECONNREFUSED 127.0.0.1:80  
 ![connectError](/images/postimages/nexttolaravelerror.png)  
-nginx側に接続できないらしい・・・  
+nginx側に接続できないとのこと。 
 
-試行錯誤し、全然わからない状況が続いたが以下の記事に辿り着く。  
+試行錯誤し、紆余曲折を経て以下の記事に辿り着く。  
 :cat: [**docker内部で、nuxtのasync/awaitを使おうとすると connect ECONNREFUSED 127.0.0.1のエラーがでる問題**](https://teratail.com/questions/209931) :cat:   
 
 どうやらドメインを **host.docker.internal**という特殊なドメインに接続する必要があるとのこと。  
-早速変更。  
+
 ### リカバリ
 ``` javascript
 // uri: 'http://localhost/graphql'

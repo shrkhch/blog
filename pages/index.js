@@ -10,7 +10,7 @@ export default function Home({ posts }) {
         <title>Top</title>
       </Head>
 
-      <ul className="grid grid-cols-2 gap-3 list-none w-full px-0">
+      <ul className="grid xl:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-3 list-none w-full px-0">
         {posts.map((post,index) => {
           //console.log(post["frontmatter"]["id"]);
           return (
