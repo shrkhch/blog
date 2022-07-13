@@ -10,7 +10,7 @@ export default function Post({post}) {
     if(tag_flag == true) {
         return (
             <>  
-                <div className='mx-3 my-1'>
+                <div className='my-1'>
                     <a href={`/blog/${post.slug}`}>
                     <div className="text-center rounded-md border border shadow-md hover:bg-zinc-50">
                         <h3 className="text-md p-3">{post.frontmatter.date}</h3>
@@ -25,7 +25,6 @@ export default function Post({post}) {
                             }
                         )}
                     </div> */}
-
             </>
         );
     } else {
