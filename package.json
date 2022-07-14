@@ -13,6 +13,7 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.5.1",
+    "iconoir-react": "^5.1.4",
     "markdown-to-jsx": "^7.1.7",
     "next": "^12.2.0",
     "next-themes": "^0.2.0",

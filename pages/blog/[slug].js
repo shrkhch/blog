@@ -14,12 +14,12 @@ export default function PostPage({
     frontmatter: {title,date,}, slug, content 
 }) {
     return (
-        <div className="mx-auto py-2 prose prose-md w-full">
+        <div className="mx-auto py-2 prose prose-md w-full dark:text-zinc-50">
             <Head>
                 <title>{slug}</title>
             </Head>
             <div className="flex-col text-right">
-                <p className=" text-zinc-600 ">公開日：{date}</p>
+                <p>公開日：{date}</p>
             </div>
             <div className="flex-col mb-3">
                 <h2 className="text-center">{title}</h2>
@@ -39,7 +39,7 @@ export default function PostPage({
 
             <div className="text-right my-3">
                     <Link href={"/"}>
-                        <a className="hover:text-gray-400 no-underline">back</a>
+                        <a className="text-indigo-500 no-underline">戻る</a>
                     </Link>
             </div>
         </div>

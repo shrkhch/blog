@@ -21,25 +21,25 @@ body {
     --foreground: white;
 }
 h1 {
-    @apply font-bold
+    @apply font-bold dark:text-zinc-50;
 }
 h2 {
-    @apply font-bold
+    @apply font-bold dark:text-zinc-50;
 }
 a {
     text-decoration: none;
 }
 
 .markdown h1 {
-    @apply text-stone-50 text-3xl py-2;
+    @apply text-stone-50 text-3xl py-2 dark:text-zinc-50;
 }
 
 .markdown h2 {
-    @apply text-gray-600 text-2xl py-2;
+    @apply text-gray-600 text-2xl py-2 dark:text-zinc-50;
 }
 
 .markdown h3 {
-    @apply text-gray-600 text-xl py-2;
+    @apply text-gray-600 text-xl py-2 dark:text-zinc-50;
 }
 
 .markdown br {
@@ -47,7 +47,7 @@ a {
 }
 
 .markdown strong {
-    @apply font-bold;
+    @apply font-bold dark:text-zinc-50;
 }
 
 .markdown ul {
@@ -59,13 +59,15 @@ a {
 }
 
 .markdown a {
-    @apply text-gray-700 font-medium;
+    @apply text-gray-700 dark:text-indigo-50 font-medium;
 
 }
 
 .markdown p {
-    @apply py-1;
+    @apply py-1 dark:text-zinc-50;
 }
+
+
 
 .markdown img {
     @apply rounded-md border-2 border-gray-400;

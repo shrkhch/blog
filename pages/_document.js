@@ -8,7 +8,7 @@ export default function Document() {
                 <meta name="description" content="blog and products" />
                 <Head />
             </head>
-            <body>
+            <body className='dark:bg-gray-800'>
                 <Main />
                 <NextScript />
             </body>

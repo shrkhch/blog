@@ -12,7 +12,7 @@ export default function Post({post}) {
             <>  
                 <div className='my-1'>
                     <a href={`/blog/${post.slug}`}>
-                    <div className="text-center rounded-md border border shadow-md hover:bg-zinc-50">
+                    <div className="text-center rounded-md border shadow-md ">
                         <h3 className="text-md p-3">{post.frontmatter.date}</h3>
                             <h2 className="inline-block text-xl no-underline pb-3">{post.frontmatter.title}</h2>
                     </div>
