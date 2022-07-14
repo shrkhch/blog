@@ -14,7 +14,7 @@ export default function PostPage({
     frontmatter: {title,date,}, slug, content 
 }) {
     return (
-        <div className="mx-auto py-2 prose prose-md w-full dark:text-zinc-50">
+        <div className="mx-auto px-2 py-2 prose prose-md w-full dark:text-zinc-50">
             <Head>
                 <title>{slug}</title>
             </Head>
