@@ -1,0 +1,55 @@
+.markdown {
+    @apply max-w-2xl tracking-tight leading-normal break-words px-1.5;
+}
+
+.markdown h1 {
+    @apply text-3xl font-bold my-3;
+}
+
+.markdown h2 {
+    @apply text-2xl font-bold my-3;
+}
+
+.markdown h3,h4,h5 {
+    @apply text-xl font-bold my-1.5;
+}
+
+.markdown p {
+    @apply align-baseline text-xl py-1.5;
+}
+
+.markdown ul {
+    @apply list-[circle] pl-7 text-xl;
+}
+
+.markdown ol {
+    @apply list-decimal pl-7 text-xl;
+}
+
+.markdown a {
+    text-decoration: none;
+    color: #3261ba;
+}
+
+.markdown pre {
+    @apply overflow-hidden whitespace-pre-line my-2;
+}
+
+.markdown pre > code {
+    @apply text-sm;
+}
+
+.markdown p > img {
+    @apply mx-auto rounded-md
+}
+
+.markdown p > code {
+    @apply text-lg bg-blue-200;
+}
+
+.markdown blockquote {
+    @apply border-l-2 border-gray-400
+}
+.markdown blockquote > p {
+    @apply text-slate-500 italic font-light mx-0 pl-5;
+}

@@ -1,30 +1,32 @@
 ---
 id: 2
-title: 'Nodemailer使ってみた'
+title: 'Mail tests on Nodemailer'
 date: '2022-04-30'
 tags:
     - Node.js
-    - NodeMailer
+    - Nodemailer
+    - email
 ---
+  
+I decided to use [Nodemailer](https://nodemailer.com/about/) that had opportunity to make email sending tool.
 
-Next.jsでメール送信の機能を作成する機会があったので、Nodemailerを使ってみることにした。
+## Nodemailer
 
-## Nodemailerとは
+This module is able to send email on Node.js app. It is used many users, license is MIT.  
 
-Node.jsアプリケーションで簡単にメールが送信できるモジュール。  
-公式ドキュメントは[**こちら**](https://nodemailer.com/about/)  
+## Install  
 
-## 導入  
-
-npmコマンドでインストール。
-
-``` javascript
+```javascript
 npm i nodemailer
 ```
 
-**pages/api/sendmail.js**
+## Usage  
 
-``` javascript
+When setting for auth option in createTransport you should not write username and password by literal.  
+
+So, you need to make ``` .env ``` file and call [dotenv](https://github.com/motdotla/dotenv) to refer environment variable.
+
+```javascript
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
 dotenv.config();
@@ -54,8 +56,3 @@ export default async function handler(req, res) {
     })
 };
 ```
-
-## 記録
-
-createTransportでauthの設定をする際、ベタ書きはセキュアでない為環境変数で設定を行った。  
-この時、dotenvモジュールで.envの参照を行わないとsubmitイベント時にエラーが発生する。

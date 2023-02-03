@@ -1,28 +1,38 @@
 ---
 id: 5
-title: 'NextとLaravelの連携'
-date: '2022-05-16'
-tags: 
-    - graphql
-    - docker
+title: "Link Next.js and Laravel"
+date: "2022-05-16"
+tags:
+  - GraphQL
+  - Docker
+  - Laravel
+  - Next.js
 ---
 
-graphqlを使ってNext.jsとバックエンドとの連携のテストをした。実施したこととエラーのリカバリ方法を記録する。  
+I catched a connection error between Next.js and Laravel when had tested using those to implement GraphQL Query. I write how to recover.
 
-## 主な環境  
-- インフラ
-  - Docker Desktop for Mac
-- フロントエンド
-    - Next.js port:3000
-    - Apollo Client
-- バックエンド
+## GraphQL
+  
+> GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.  
+> [graphql.org](https://graphql.org/)
+
+## Tools
+  
+- container  
+  - Docker
     - Laravel
-    - nginx port:80
+    - Lighthouse
+    - nginx
     - MySQL
+- frontend
+  - Next.js
+  - Apollo Client
 
-## graphql  
-以下のクエリで値が取得できるようLaravel側で設定。
-``` 
+## todo
+
+Excute below query to get ``` userId ``` in Next.js.
+
+```graphql
 query {
     users {
         id
@@ -30,25 +40,27 @@ query {
 }
 # {id: '1'}
 ```
-## Next.js  
-Apolloとgraphqlをインストール
-``` javascript
-npm i @apollo/client graphql 
+
+## Next.js
+  
+install ApolloClient and graphql.
+
+```node
+npm i @apollo/client graphql
 ```
-getStaticPropsでクエリを記述し、値の取得を行う。
-``` javascript
-// index.js
-export default function Home({launches}) {
-    console.log(launches);
-    return (
-        <div>test</div>
-    );
+
+Coding query to get value test at getStaticProps.
+
+```javascript
+export default function Home({ launches }) {
+  console.log(launches);
+  return <div>test</div>;
 }
 
 export async function getStaticProps() {
   const client = new ApolloClient({
-    uri: 'http://localhost/graphql',
-    cache: new InMemoryCache()
+    uri: "http://localhost/graphql",
+    cache: new InMemoryCache(),
   });
 
   const { data } = await client.query({
@@ -58,33 +70,30 @@ export async function getStaticProps() {
           id
         }
       }
-    `
+    `,
   });
   return {
     props: {
-      launches: data
-    }
-  }
+      launches: data,
+    },
+  };
 }
 ```
-**しかしここでエラーが発生**  
-reason: connect ECONNREFUSED 127.0.0.1:80  
-![connectError](/images/postimages/nexttolaravelerror.png)  
-nginx側に接続できないとのこと。 
 
-試行錯誤し、紆余曲折を経て以下の記事に辿り着く。  
-:cat: [**docker内部で、nuxtのasync/awaitを使おうとすると connect ECONNREFUSED 127.0.0.1のエラーがでる問題**](https://teratail.com/questions/209931) :cat:   
+Error connecting GraphQL occurred when running Next.js.  
+``` reason: connect ECONNREFUSED 127.0.0.1:80 ```
+  
+Appearly, it seems like falied connect to backend side.
+  
+![connectError](/images/postimages/nexttolaravelerror.png)
 
-どうやらドメインを **host.docker.internal**という特殊なドメインに接続する必要があるとのこと。  
+## Recovery
 
-### リカバリ
-``` javascript
-// uri: 'http://localhost/graphql'
-uri:'http://host.docker.internal/graphql'
+According to [Docs](https://docs.docker.com/desktop/mac/networking/#use-cases-and-workarounds), it needs to set uri special DNS in ApolloClient as follow.
+  
+```html
+http://host.docker.internal/graphql
 ```
-
-無事値が取得できました。
-![connectSuccess](/images/postimages/connectedlaravel.png)  
-
-## 特殊ドメイン
-**host.docker.internal**については[公式](https://docs.docker.com/desktop/mac/networking/#use-cases-and-workarounds)に記載があり、コンテナからホストに繋ぐ際に使われる開発時の特殊ドメインだそうでDocker Desktop for Mac環境でしか使用できないとのこと。またエラーが起きそうな予感がします。
+  
+This URI is for development purpose and does not production environment.
+  

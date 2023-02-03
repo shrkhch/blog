@@ -1,31 +1,29 @@
 ---
 id: 3
-title: 'useStateについて'
+title: 'About Hooks of React'
 date: '2022-05-08'
 tags:
-    - React Hooks
-    - Spread Syntax
+    - React
+    - Hooks
 ---
 
-React Hooksの機能の一つ、useStateなどの使い方についてのメモ。
+## What is Hooks  
 
-## React Hooksとは  
-
-React16.8で導入され、Reactのstateなどの機能をクラスを書かずに使えるようにした新機能。  
-Reactの機能に接続するための特別な関数。
+> Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.  
+[Hooks - React](https://reactjs.org/docs/hooks-state.html)
 
 ## useState
 
-``` javascript
+```javascript
 const [state, setState] = useState(initialValue);
 ```
 
-stateが変数、setStateがstateの値を更新する関数、useState関数で初期値を宣言する。
+``` state ``` is variable.  ``` setState ``` is to update function for state value.  
+And initial value is declared in ``` useState ``` function.
 
-## フォームでの実装
+## Implement on Form
 
 ``` javascript
-// 例
 const [name, setName] = useState('');
 const [mail, setMail] = useState('');
 const [password, setPassword] = useState('');
@@ -43,10 +41,10 @@ const handlePassWord = (password) => {
 
 ```
 
-1つのフォームに対して１つの関数だと非効率なため、下記に修正。
+``` state ``` puts together it looks like simple as follow.  
+In addition to simple, you don't need coding multiple handler.
 
 ``` javascript
-// 例
 const [values, setValues] = useState({
     name: '',
     email: '',
@@ -57,14 +55,11 @@ const handleOnChange = (name,value) => {
     setValues({...values, [name]: value});
 }
 ```
-
+  
 ``` jsx
-{/*例*/}
 <form>
     <input type="text" name="name" value={values.name} onChange={(e) => handleOnChange(e.target.name,e.target.value)} />
     <input type="email" name="email" value={values.email} onChange={(e) => handleOnChange(e.target.name,e.target.value)} />
     <input type="password" name="password" value={values.password} onChange={(e) => handleOnChange(e.target.name,e.target.value)} />
 </form>
 ```
-
-オブジェクトにすることで複数のフォームに対して一つの関数で済む。

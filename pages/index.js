@@ -1,36 +1,39 @@
-/* eslint-disable react/jsx-key */
-import Head from 'next/head'
-import Post from '@/components/Post'
-import getAllPosts from 'lib/post';
+import Head from "next/head";
+import Post from "@/components/Post";
+import getAllPosts from "lib/post";
 
 export default function Home({ posts }) {
   return (
-    <div>
+    <>
       <Head>
-        <title>Top</title>
+        <title>Posts</title>
       </Head>
-
-      <ul className="grid xl:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-3 list-none w-full">
-        {posts.map((post,index) => {
-          //console.log(post["frontmatter"]["id"]);
-          return (
-          <li key={post.frontmatter.id} className="px-3 my-4">
-            <Post post={post} /> 
-          </li>
-          )
-        })
-        }
-      </ul>
-    </div>
-  )
+      <div className="flex flex-col justify-center w-full">
+        <div className="mx-auto max-w-3xl items-center">
+          <h1 className="text-center text-3xl pb-5 underline underline-offset-[10px] decoration-2">
+            Posts
+          </h1>
+          <ul>
+            {posts.map((post) => {
+              return (
+                <li key={post.frontmatter.id}>
+                  <Post post={post} />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   const posts = getAllPosts();
 
   return {
-      props: {
-        posts,
-      },
+    props: {
+      posts,
+    },
   };
 }

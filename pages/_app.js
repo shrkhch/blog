@@ -1,19 +1,18 @@
-import '../styles/global.css';
-import 'highlight.js/styles/default.css'
-import Head from 'next/head';
-import Layout from '../components/Layout';
-import { ThemeProvider } from 'next-themes';
+import "styles/global.css";
+import "styles/markdown.css";
+import "@fontsource/m-plus-rounded-1c";
+import Head from "next/head"
+import Layout from "components/Layout";
 
-const MyApp = ({ Component, pageProps }) => {
-  return(
+export default function MyApp({ Component, pageProps }) {
+  return (
     <>
-      <ThemeProvider attribute="class" defaultTheme="light">
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
-  )
+  );
 }
-
-export default MyApp
