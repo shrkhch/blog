@@ -1,6 +1,6 @@
 export default function Post({ post }) {
   return (
-    <div className="flex flex-col items-start mb-5 gap-1 border-b-2 border-gray-600 border-dashed">
+    <div className="flex flex-col items-start mb-5 gap-1">
       <h2 className="text-md">{post.frontmatter.date}</h2>
       <h1 className="text-xl">
         <a
